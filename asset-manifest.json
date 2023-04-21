@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/component-mock/static/css/main.946c2fa5.css",
+    "main.js": "/component-mock/static/js/main.c590ecf1.js",
+    "static/media/placeholder1.png": "/component-mock/static/media/placeholder1.68a941e0ff562a93ddee.png",
+    "static/media/vailFooter.png": "/component-mock/static/media/vailFooter.2b821c8e3f9789e4e35b.png",
+    "static/media/vailDesktopMenu.png": "/component-mock/static/media/vailDesktopMenu.49e2766ceb4600922106.png",
+    "index.html": "/component-mock/index.html",
+    "static/media/skischool-header-mountains.svg": "/component-mock/static/media/skischool-header-mountains.4d5b302084945da0f6cc.svg",
+    "main.946c2fa5.css.map": "/component-mock/static/css/main.946c2fa5.css.map",
+    "main.c590ecf1.js.map": "/component-mock/static/js/main.c590ecf1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.946c2fa5.css",
+    "static/js/main.c590ecf1.js"
+  ]
+}
