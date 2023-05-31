@@ -1,0 +1,83 @@
+.enhancedFCE {
+    width: 100%;
+}
+
+.enhancedFCEContentContainer {
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    min-height: 500px;
+}
+
+.enhancedFCEContentContainer div {
+    flex: 1 1 505px;
+}
+
+.eFCECopyContainer {
+    background-color: #144276;
+    order: 2;
+    padding: 2rem 2rem 6rem 2rem;
+    -ms-flex-order: 2;
+}
+
+.eFCECopyContainer h3 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-size: 1.6em;
+}
+
+.eFCECopyContainer ul {
+    margin-left: 2rem;
+}
+
+.eFCECopyContainer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.eFCEImageContainer {
+    max-width: 100%;
+    /* background-color: #144276; */
+    transition: 1s ease-in;
+}
+
+.eFCEImageContainer img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 1s ease-out;
+}
+
+.eFCEImageContainer img.active {
+    transform: translateX(0%);
+    transition: 1s ease-out;
+}
+
+.enhancedFCEBgGradient {
+    background-image: url(../assets/skischool-header-mountains-reverse.svg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: 0% 100.5%;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+@media screen and (min-width: 1025px){
+    .eFCECopyContainer {
+        order: 0;
+        -ms-flex-order: 0;
+        padding: 4rem 3rem;
+    }
+    
+    .enhancedFCEBgGradient{
+        background-size: 30%;
+    }
+}

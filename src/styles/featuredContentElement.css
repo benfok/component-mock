@@ -1,0 +1,73 @@
+.FCElement {
+    margin: 50px 20px;
+    color: white;
+}
+
+.FCEBackground {
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    margin-left:25%;
+    /* transform: translate(25%, 0); */
+    background-color: #144276;
+    transform: rotate(-0.5deg);
+}
+
+.FCEContainer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.FCEImageContainer {
+    /* max-width: 45%; */
+    flex: 0 0 45%;
+}
+
+.FCEImageContainer img {
+    object-fit: contain;
+    width: 100%;
+    padding: 40px 0 20px 0;
+}
+
+.FCECopyContainer {
+    /* max-width: 55%; */
+    flex: 0 0 53%;
+    padding: 40px 40px 40px 20px;
+    font-size: 80%;
+}
+
+.FCECopyContainer > h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.FCECopyContainer div > ul {
+    margin-left: 50px;
+}
+
+.FCECopyContainer div > p, 
+.FCECopyContainer div > ul > li,
+.FCECopyContainer div > h4 {
+    margin-bottom: 1rem; 
+    font-size: 1rem;
+}
+
+.FCECopyContainer div > .btn {
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.FCECopyContainer div > div > a {
+    color: white
+}
+
+@media only screen and (min-width: 1200px) {
+    .FCElement  {
+        width: 1180px;
+        margin: 50px auto;
+    }
+}

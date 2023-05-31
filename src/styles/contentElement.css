@@ -1,5 +1,7 @@
 .contentElement {
-    margin: 50px 20px;
+    margin: 50px auto;
+    width: 95%;
+    max-width: 1200px;
 }
 
 .contentElementBackground {
@@ -32,19 +34,20 @@
 }
 
 .contentCopyContainer {
-    /* max-width: 55%; */
     flex: 0 0 53%;
-    padding: 40px 40px 40px 20px;
+    padding: 0 40px 0 20px;
     font-size: 80%;
 }
 
-.contentCopyContainer > h2 {
+.contentCopyContainer > h3 {
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    font-size: 1.6em;
 }
 
 .contentCopyContainer div > ul {
     margin-left: 50px;
+    margin-top: 1rem;
 }
 
 .contentCopyContainer div > p, 
@@ -62,8 +65,9 @@
     color: white
 }
 
-.contentbg {
+.contentBg {
     background-color: #eee;
+    padding: 40px 40px 40px 20px;
 }
 
 .top-slope {
@@ -88,7 +92,6 @@
 
 @media only screen and (min-width: 1200px) {
     .contentElement  {
-        width: 1180px;
         margin: 50px auto;
     }
 }

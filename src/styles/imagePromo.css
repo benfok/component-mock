@@ -1,0 +1,64 @@
+.image-promo-container {
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 150vh;
+    background-attachment: fixed;
+}
+
+.image-promo-overlay {
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.image-promo-content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    clip: rect(0,auto,auto,0);
+}
+
+.image-promo-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    z-index: 100;
+    color: white;
+}
+
+.image-promo-content h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.image-promo-content p {
+    line-height: 1.5rem;
+}
+
+.image-promo-cta-container {
+    margin: 2rem 0;
+    min-width: 200px;
+}
+
+@media screen and (max-width: 768px){
+    .image-promo-content p {
+        font-size: 85%;
+    }
+}

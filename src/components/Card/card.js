@@ -51,7 +51,7 @@ const Card = ({cardID, image, imageAlt, heading, shortDesc, longDesc, ctaText, h
             </div>
             <div className="cardContentCont" data-id={`content-${cardID}`}>
                     <>                  
-                        <h2 className="cardHeading">{heading}</h2>
+                        <h3 className="cardHeading">{heading}</h3>
                         <div className="cardContent">
                             <p className="cardShortDesc">{shortDesc}</p>
                             {(isExpanded && activeTab === 'info') && <p>{longDesc}</p>}
@@ -63,9 +63,11 @@ const Card = ({cardID, image, imageAlt, heading, shortDesc, longDesc, ctaText, h
                     </>
             </div>
             <div className='ctaCont'>
-                <div className={(hours || location) ? "cardIconCont" : "cardIconContFull"}>
-                    <a className="btn secondaryCTA" href="#">{ctaText}</a>
-                </div>
+                {ctaText && 
+                    <div className={(hours || location) ? "cardIconCont" : "cardIconContFull"}>
+                        <a className="btn secondaryCTA" href="#">{ctaText}</a>
+                    </div>
+                }
                 {(hours || location) &&
                 <div className="cardIconCont">
                         <div className={activeTab === "hours" ? "cardIcon activeCardIcon" : "cardIcon"} onClick={() => expandCard('hours')}>

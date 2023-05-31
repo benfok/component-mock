@@ -29,13 +29,13 @@ function Header () {
             }
             <div className="heroTextContainer">
                 <div className="heroSub">
-                    Vail Ski & Snowboard School
+                    Vail Resorts Mock Page
                 </div>
                 <h1>
-                    Experience a Mountain Like No Other
+                    Component Enhancement Examples
                 </h1>
                 <p>
-                    Learn a new sport, improve your technique, or explore new possibilities. At Vail, you don't just experience a mountain like no other, you learn how to truly explore it.
+                    A mock Vail Resorts page usimng existing page structure to showcase suggested changes to existing components, or new components to consider adding to enhance site format interactivity.
                 </p>
             </div>
         </div>
