@@ -6,18 +6,26 @@ import Footer from './components/Footer/index';
 import SectionHeading from './components/Shared/sectionHeading';
 import BasicContent from './components/Shared/basicContent';
 import ImagePromo from './components/imagePromo';
-import imagePromo1 from '../src/assets/pic4.jpg';
 import EnhancedFCE from './components/FCE/enhancedFCE';
-import image1 from './assets/placeholder1.png';
-import listExample1 from './assets/example-1.png';
 import FCElement from './components/FCE/FCElement';
 import IconizedList from './components/Icon List/iconizedList';
+import ParallaxList from './components/Enhanced Lists/parallaxList';
+import IconizedList2 from './components/Icon List/iconizedList2';
+import InteractiveList from './components/Enhanced Lists/interactiveList';
+import SlidingCardContainer from './components/Sliding Cards/slidingCardContainer';
+
+// images
+import imagePromo1 from '../src/assets/pic4.jpg';
+import image1 from './assets/placeholder1.png';
+import image2 from '../src/assets/pic5.jpg';
+import image3 from './assets/placeholder2.webp';
+import image4 from '../src/assets/pic3.jpg';
+import listExample1 from './assets/example-1.png';
 
 // icons
 import {BsPeopleFill, BsClockFill, BsFillCalendarCheckFill, BsBarChartFill} from 'react-icons/bs';
 import {FaMapMarkerAlt} from 'react-icons/fa';
 import {TbAlertTriangleFilled} from 'react-icons/tb';
-import ParallaxList from './components/Parallax List/parallaxList';
 
 function App() {
 
@@ -47,6 +55,61 @@ function App() {
                 />
                 <SectionHeading heading = "Product Cards Landing" id = "pcl-1" />
                 <CardMock/>
+                <SectionHeading heading = "Sliding Cards" id = "scards-1" />
+                <BasicContent
+                  heading = "Enhanced Sliding Cards"
+                  content = {<><p>The current sliding card component is an effective, responsive and interactive component, however the character limit on the text field limits it's versitility. Here is a built from scratch example of how the component could be tweaked to include an optional, expandable text area.</p><br/><p>Some limitations with this coding example as it is in draft form:</p><ul><li>There are 5 cards but they do not loop indefinitely.</li><li>If the screen width is resized you may need to refresh the page to recenter the carousel.</li></ul></>}
+                  background = {true}
+                />
+                <SlidingCardContainer 
+                  cards = {[
+                    {
+                      cardID: "sCard-1",
+                      image: imagePromo1,
+                      imageAlt: "Placeholder",
+                      heading: "Sliding Card 1",
+                      shortDesc: <p>Hello there. This is a sliding card short description.</p>,
+                      longDesc: <><p>This is a sliding card long description.</p><br/><p>The existing sliding cards are very limiting in the number of characters allowed, which greatly limits the component's versitility.</p><br/><p>An optional expandable description offers some interesting opportunities.</p></>,
+                      ctaText: "Learn More"
+                    },
+                    {
+                      cardID: "sCard-2",
+                      image: image1,
+                      imageAlt: "Placeholder",
+                      heading: "Sliding Card 2",
+                      shortDesc: <p>Hello there. This is a sliding card short description but without a long description; so not expandable.</p>,
+                      longDesc: null,
+                      ctaText: "Learn More"
+                    },
+                    {
+                      cardID: "sCard-3",
+                      image: image2,
+                      imageAlt: "Placeholder",
+                      heading: "Sliding Card 3",
+                      shortDesc: <p>Hello there. This is a sliding card without a CTA</p>,
+                      longDesc: <p>But there is still a long description.</p>,
+                      ctaText: null
+                    },
+                    {
+                      cardID: "sCard-4",
+                      image: image3,
+                      imageAlt: "Placeholder",
+                      heading: "Sliding Card 4",
+                      shortDesc: <p>And another one, just for fun and games.</p>,
+                      longDesc: <><p>This is a sliding card long description.</p><br/><p>The existing sliding cards are very limiting in the number of characters allowed, which greatly limits the component's versitility.</p><br/><p>An optional expandable description offers some interesting opportunities.</p></>,
+                      ctaText: "Learn More"
+                    },
+                    {
+                      cardID: "sCard-5",
+                      image: image4,
+                      imageAlt: "Placeholder",
+                      heading: "Sliding Card 5",
+                      shortDesc: <p>Last one. For reals.</p>,
+                      longDesc: null,
+                      ctaText: "Learn More"
+                    },
+                  ]}
+                />
                 <SectionHeading heading = "Enhanced Full Page FCE" id = "efce-1" />
                 <EnhancedFCE
                   heading = "An Enhanced FCE"
@@ -101,13 +164,116 @@ function App() {
                       icon: <FaMapMarkerAlt/>
                     },
                   ]}
-                  heading = 'Basic Attribute List Example'
+                  heading = 'Simple Attribute List Example'
                   listId = 'iconList1'
                 />
-                <SectionHeading heading = "Parallax List" id = "list-2" />
+                <IconizedList2 
+                  items = {[
+                    {
+                      heading: 'Ages',
+                      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                      icon: <BsPeopleFill/>
+                    },
+                    {
+                      heading: 'Skill Level',
+                      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+                      icon: <BsBarChartFill/>
+                    },
+                    {
+                      heading: 'Requirements',
+                      copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      icon: <TbAlertTriangleFilled/>
+                    },
+                    {
+                      heading: 'Hours',
+                      copy: <>Lorem ipsum dolor<br/>Lorem ipsum dolor<br/>Lorem ipsum dolor</>,
+                      icon: <BsClockFill/>
+                    },
+                    {
+                      heading: 'Dates',
+                      copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                      icon: <BsFillCalendarCheckFill/>
+                    },
+                    {
+                      heading: 'Location',
+                      copy: <>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> <a href='#'>Map It</a></>,
+                      icon: <FaMapMarkerAlt/>
+                    },
+                  ]}
+                  heading = 'Descriptive Attribute List Example'
+                  listId = 'iconList2'
+                />
+                <SectionHeading heading = "Enhanced Lists" id = "list-2" />
+                  <InteractiveList
+                    heading = 'Interactive List'
+                    listId = 'interactiveList1' 
+                    ctaText = 'Optional CTA'
+                    listItems = {[
+                        {
+                          listText: 'Item 1',
+                        },
+                        {
+                          listText: 'Item 2',
+                        },
+                        {
+                          listText: 'Item 3',
+                        },
+                        {
+                          listText: 'Item 4',
+                        },
+                        {
+                          listText: 'Item 5',
+                        },
+                      ]}
+                    listDetails = {[
+                        {
+                          html: <div className="iListDetails">
+                                  <p><strong>A USE ALTERNATIVE TO STACKED FCES</strong></p><p>Especially once we get beyond 2-3 in a row.</p><br/><p>Keeps related content contain visually on the screen and the added interaction (clicking) with out the distraction of scrolling through content increases engagement.</p><br/><br/><p><strong>A USE ALTERNATIVE TO TABS</strong></p><p>Especially when the tab content is in the middle of the page and content continues below. Often the section breaks are hard to visually discern and the page loses it's overall flow and direction.</p><br/><br/><p><strong>AS A NEW COMPONENT OPTION</strong></p>
+                                </div>,
+                        },
+                        {
+                          html: <div className="iListDetails">
+                                  <div className='iListDetailsImgContainer'>
+                                    <img src={image1} alt='Placeholder'/>
+                                  </div>
+                                  <p>Some content of course is hidden, and requires interaction in order to be visible, so this would only work when the items are related and perhaps not tied to separate CTAs</p>
+                                </div>,
+                        },
+                        {
+                          html: <div className="iListDetails">
+
+                                  <p>There is plenty of room for copy presented in an easy to absorb way. Usage examples could be lists of:</p>
+                                  <ul>
+                                    <li>Features/Benefits</li>
+                                    <li>Requirements</li>
+                                    <li>Products/Activities</li>
+                                    <li>Product Details</li>
+                                    <li>Any kind of "small print"</li>
+                                    <li>Steps in a Process</li>
+                                    <li>Stats or Hours for different LOBs</li>
+                                    <li>Etc.</li>
+                                  </ul>
+                                </div>,
+                        },
+                        {
+                          html: <div className="iListDetails reverseColorWhite">
+                                  <div className='iListDetailsImgContainer'>
+                                    <img src={image1} alt='Placeholder'/>
+                                  </div>
+                                  <p>Image and alternate color scheme</p>
+                                </div>,
+                        },
+                        {
+                          html: <div className="iListDetails reverseColorWhite">
+                                  <p>CTAs could exist on a list item or better, as a single, optional CTA below the list items - when the purpose of the entire list is to drive conversion.</p>
+                                </div>,
+                        },
+                      ]}                  
+                  />
                   <ParallaxList 
                     heading = 'Parallax List'
-                    listId = 'parallaxList1' 
+                    listId = 'parallaxList1'
+                    ctaText= 'Optional Sticky CTA' 
                     listItems = {[
                         {
                           listText: 'Step 1',
@@ -133,7 +299,7 @@ function App() {
                         },
                         {
                           html: <div className="pListDetails">
-                                  <p>This example is a little buggy and does not work on screens below 900px width but it shows the potential.</p>
+                                  <p>This example is a little buggy and not fully styled. It does not work on screens below 900px width but showcases the potential of a component like this.</p>
                                 </div>,
                         },
                         {
@@ -161,7 +327,6 @@ function App() {
                       ]}
                   />
                 <SectionHeading heading = "Timeline" id = "tline-1" />
-                <SectionHeading heading = "Sliding Cards" id = "scards-1" />
               </main>
             <Footer />
         </div>

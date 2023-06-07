@@ -18,6 +18,10 @@
 
 }
 
+html {
+  max-width: 100vw;
+}
+
 body {
   /* setting a font size for all child elements that can then be relatively referenced */
   font-size: 18px;
@@ -103,7 +107,7 @@ a {
   display: flex;
   flex-flow: column;
   text-align: center;
-  padding: 0 40px;
+  padding: 40px;
 }
 
 .mobileMainIcon {

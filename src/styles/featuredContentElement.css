@@ -71,3 +71,27 @@
         margin: 50px auto;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    .FCEContainer {
+        flex-flow: column;
+        gap: 0px;
+    }
+
+    .FCEBackground {
+        margin-left: 0;
+        width: 100%;
+        transform: rotate(0);
+    }
+
+    .FCEImageContainer {
+        max-height: 320px;
+        overflow: hidden;
+    }
+
+    .FCEImageContainer img {
+        padding: 0;
+        object-fit: cover;
+        ;
+    }
+}

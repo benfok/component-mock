@@ -1,9 +1,15 @@
-import {React, useMemo} from 'react';
-import '../../styles/parallaxList.css';
+import {React, useEffect, useMemo} from 'react';
+import '../../styles/enhancedList.css';
 import useObserver from '../../hooks/useObserver';
+import { IconContext } from 'react-icons/lib';
+import { TbArrowAutofitWidth } from 'react-icons/tb';
+import useMedia from '../../hooks/useMedia';
 
 
-const ParallaxList = ({heading, listItems, listDetails, listId}) => {  
+const ParallaxList = ({heading, listItems, listDetails, listId, ctaText}) => {  
+
+    // determine if screen size is less than 1080px and render accordingly
+    const isMobile = useMedia('(max-width: 700px)');
 
     // call in the custom useObserver hook to create the wipe in animation on the heading
     const [containerRef, isVisible] = useObserver({
@@ -52,11 +58,23 @@ const ParallaxList = ({heading, listItems, listDetails, listId}) => {
         threshold: 0.2
     }
 
+    const refArray = [];
+
+    // create an array of the TbRefresh. Then use useEffect to manage the observer on these after the component renders and unrenders
     const buildRefArray = (element) => {
-        const observer = new IntersectionObserver(addObserver, liOptions)
-        observer.observe(element);
+        refArray.push(element);
     }
 
+    useEffect(() => {
+        
+        const observer = new IntersectionObserver(addObserver, liOptions)
+        refArray.forEach(element => {
+            observer.observe(element);
+        });
+      
+    })
+
+    // useMemo ensures that the list items and details only render(map) once to the DOM to save resource. 
     const liItems = useMemo(() => {
         
         const html = listItems.map((element, index) => {
@@ -90,20 +108,38 @@ const ParallaxList = ({heading, listItems, listDetails, listId}) => {
 
 
     return (
-        <section className="parallaxList">
-            <div id="pListItems">
-                <h2 id="pListHeading" ref={containerRef}>
-                    <span className={isVisible ? 'active' : ''}>{heading}</span>
-                </h2>
-                <ol className="pListContainer">
-                    {liItems}
-                    <div className="pListBuffer"></div>
-                </ol>    
+        <>
+        {isMobile &&
+            <div className="mobilePlaceholder">
+                <IconContext.Provider value={{ className: "mobileMainIcon"}}>
+                    <TbArrowAutofitWidth />
+                </IconContext.Provider>
+                <p>The <strong>Parallax List component</strong> is currently only configured for screen widths 700 pixels or wider.</p><br/>
+                <p>For a mobile version, please contact:<br/><a href="mailto:ben@tidylines.co">ben@tidylines.co</a></p>
             </div>
-            <div id="pListDetails">
-                {liDetails}
-            </div>
-        </section>
+        }
+        {!isMobile &&      
+            <section className="parallaxList">
+                <div id="pListItems">
+                    <h2 id="pListHeading" ref={containerRef}>
+                        <span className={isVisible ? 'active' : ''}>{heading}</span>
+                        {ctaText &&
+                            <div className="pListCTA">
+                                <a className="btn primaryCTA" href="#">{ctaText}</a>
+                            </div>
+                        }
+                    </h2>
+                    <ol className="pListContainer">
+                        {liItems}
+                        <div className="pListBuffer"></div>
+                    </ol>    
+                </div>
+                <div id="pListDetails">
+                    {liDetails}
+                </div>
+            </section>
+        }
+        </>
     )
 }
 

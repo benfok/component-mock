@@ -1,0 +1,174 @@
+
+
+
+.slidingCards {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.slidingCardsWrapper {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slidingCardsReel {
+    height: 450px;
+    width: 2800px;
+    overflow: hidden;
+    transform: translateX(-1040px);
+    transition: transform 1s ease;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.sCardContainer {
+    display: inline-block;
+    flex-basis: 260px;
+    width: 260px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: 0 1px 4px 2px rgba(100,100,100,.15);
+    transition: all 1s ease;
+    outline: 0;
+}
+
+.inactiveCardContainer {
+    height: 350px;
+}
+
+.sCardImgCont {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    transition: height .2s ease;
+    overflow: hidden;
+}
+
+.sCardImgCont img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+}
+
+.sCardContentCont {
+    background-color: #144276;
+    color: white;
+    height: 200px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    transition: height 1s ease;
+    width: 100%;
+}
+
+.inactiveCard {
+    background-color: white;
+    transition: height 1s ease;
+    height: 150px;
+}
+
+.sCardInactiveWrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: none;
+}
+
+.sCardInactiveWrapper:hover {
+    cursor: pointer;
+}
+
+.sCardIcon {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    font-size: 2rem;
+    color: white;
+    background-color: #144276;
+    padding: 5px;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 1s ease;
+    transform: rotateX(0deg);
+}
+
+.rotated {
+    transition: all 1s ease;
+    transform: rotateX(180deg);
+}
+
+.sCardIcon:hover {
+    cursor: pointer;
+    top: -22px;
+    transition: top 0.5s ease;
+}
+
+.sCardCtaCont {
+    height: 30px;
+}
+
+.sCardHeading {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    height: 25px;
+}
+
+.inactiveHeading {
+    color:#144276;
+}
+
+.sCardContent {
+    overflow:hidden;
+    font-size: 80%;
+    height: 100px;
+    transition: height 1s ease;
+}
+
+.sCardCtaCont a {
+    color: white;
+    font-weight: 400;
+    font-size: 95%;
+    padding: 0;
+}
+
+.sCardCtaCont a:hover::after {
+    margin-left: 20px;
+}
+
+.sCardCtaCont a::after {
+    /* font-family: icons!important; */
+    content: "\203A";
+    color: white;
+    transition: margin-left 0.25s ease;
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+    font-size: 30px;
+}
+
+.slidingCardButtons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.slidingCardsArrowIcon {
+    color:#144276;
+    font-size: 2rem;
+    display: flex;
+}
+
+.slidingCardsArrowIcon:hover {
+    cursor: pointer;
+}
