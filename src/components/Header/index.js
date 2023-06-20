@@ -35,8 +35,8 @@ function Header () {
                     Component Enhancement Examples
                 </h1>
                 <p>
-                    A mock Vail Resorts page usimng existing page structure to showcase suggested changes to existing components, or new components to consider adding to enhance site format interactivity.
-                </p>
+                    A mock Vail Resorts page using existing page structure to showcase suggested changes to existing components, or new components to consider adding to enhance site format interactivity.
+                </p><br/><p>Note: This page is a draft showcase only and has been built exclusively for the Google Chrome browser. Aspects may fail on other browsers.</p>
             </div>
         </div>
     )

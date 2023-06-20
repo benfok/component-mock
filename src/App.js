@@ -58,7 +58,7 @@ function App() {
                 <SectionHeading heading = "Sliding Cards" id = "scards-1" />
                 <BasicContent
                   heading = "Enhanced Sliding Cards"
-                  content = {<><p>The current sliding card component is an effective, responsive and interactive component, however the character limit on the text field limits it's versitility. Here is a built from scratch example of how the component could be tweaked to include an optional, expandable text area.</p><br/><p>Some limitations with this coding example as it is in draft form:</p><ul><li>There are 5 cards but they do not loop indefinitely.</li><li>If the screen width is resized you may need to refresh the page to recenter the carousel.</li></ul></>}
+                  content = {<><p>The current sliding card component is an effective, responsive and interactive component, however the character limit on the text field limits it's versitility. Here is a built from scratch example of how the component could be tweaked to include an optional, expandable text area.</p><br/><p>Some limitations with this coding example as it is in draft form:</p><ul><li>There are 5 cards but they do not loop indefinitely.</li></ul></>}
                   background = {true}
                 />
                 <SlidingCardContainer 
@@ -203,7 +203,7 @@ function App() {
                   heading = 'Descriptive Attribute List Example'
                   listId = 'iconList2'
                 />
-                <SectionHeading heading = "Enhanced Lists" id = "list-2" />
+                <SectionHeading heading = "Enhanced Lists - Interactive List" id = "list-2" />
                   <InteractiveList
                     heading = 'Interactive List'
                     listId = 'interactiveList1' 
@@ -270,6 +270,7 @@ function App() {
                         },
                       ]}                  
                   />
+                  <SectionHeading heading = "Enhanced Lists - Parallax List (Scroll Down)" id = "list-3" />
                   <ParallaxList 
                     heading = 'Parallax List'
                     listId = 'parallaxList1'
@@ -299,7 +300,7 @@ function App() {
                         },
                         {
                           html: <div className="pListDetails">
-                                  <p>This example is a little buggy and not fully styled. It does not work on screens below 900px width but showcases the potential of a component like this.</p>
+                                  <p>This example is a little buggy and not fully styled. It does not work on screens below 700px width but showcases the potential of a component like this.</p><br/><p>If you resize your window below 700px and back above 700px you may need to refresh the page for this draft component to rerender correctly.</p>
                                 </div>,
                         },
                         {

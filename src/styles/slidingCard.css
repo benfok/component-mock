@@ -14,7 +14,7 @@
 
 .slidingCardsReel {
     height: 450px;
-    width: 2800px;
+    width: 4200px;
     overflow: hidden;
     transform: translateX(-1040px);
     transition: transform 1s ease;

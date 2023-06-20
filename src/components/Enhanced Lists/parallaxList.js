@@ -48,7 +48,10 @@ const ParallaxList = ({heading, listItems, listDetails, listId, ctaText}) => {
                     previousItem.children[0].classList.add('active');
             }
            }
-           document.getElementById(id).classList.remove('active');
+           if (document.getElementById(id)) {
+               document.getElementById(id).classList.remove('active');
+           }
+        //    document.getElementById(id).classList.remove('active');
        }
     }
 

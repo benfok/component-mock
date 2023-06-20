@@ -11,7 +11,7 @@ const CardMock = () => {
         <>
             <BasicContent 
                 heading = "Product Card Component"
-                content = {<><p>Below are three takes on an enhanced product card component. The existing component holds limited text and requires a CTA. It is therefore only useful as a promotional component linking elsewhere. There are many situations where the PCL component could be standalone and hold all the necessary information, or trigger a modal or direct add-to-cart to reduce clicks to purchase. Activity products could be considered in this way for example.</p>
+                content = {<><p>Below are three takes on an enhanced product card component. The existing component holds limited text and requires a CTA. It is therefore only useful as a promotional component linking elsewhere. There are many situations where the PCL component could be standalone and hold all the necessary information, or trigger a modal or direct add-to-cart to reduce clicks to purchase and the need for extra pages. Activity products or dining outlets could be considered in this way for example.</p>
                 <ul>
                     <li>As a minimal change, the CTA requirement should be changed to optional. </li>
                     <li><strong>First</strong> example below follows existing but includes a simple expandable text area where a short description can be expanded to show more information.</li>
