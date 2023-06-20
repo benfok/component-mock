@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/component-mock/static/css/main.21c86326.css",
-    "main.js": "/component-mock/static/js/main.4e388a8c.js",
+    "main.js": "/component-mock/static/js/main.944106a3.js",
     "static/media/pic3.jpg": "/component-mock/static/media/pic3.d1e5991bf4d238468265.jpg",
     "static/media/pic5.jpg": "/component-mock/static/media/pic5.c716337be36f2400ee36.jpg",
     "static/media/pic4.jpg": "/component-mock/static/media/pic4.eec52de9a7fee2599189.jpg",
@@ -14,10 +14,10 @@
     "index.html": "/component-mock/index.html",
     "static/media/skischool-header-mountains.svg": "/component-mock/static/media/skischool-header-mountains.4d5b302084945da0f6cc.svg",
     "main.21c86326.css.map": "/component-mock/static/css/main.21c86326.css.map",
-    "main.4e388a8c.js.map": "/component-mock/static/js/main.4e388a8c.js.map"
+    "main.944106a3.js.map": "/component-mock/static/js/main.944106a3.js.map"
   },
   "entrypoints": [
     "static/css/main.21c86326.css",
-    "static/js/main.4e388a8c.js"
+    "static/js/main.944106a3.js"
   ]
 }
